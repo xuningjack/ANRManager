@@ -1,0 +1,9 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.jack.anr">
+
+    <application
+        android:allowBackup="true"
+        android:label="AnrTrace"
+        android:supportsRtl="true" />
+
+</manifest>
