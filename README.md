@@ -50,7 +50,7 @@ allprojects {
 
 2、结构原理图
 
-![](https://github.com/pruas/AnrManager/blob/master/caton_design.png)
+![Alt text](https://github.com/pruas/Caton/blob/master/caton_design.png)  
 
 3、测试。
 
@@ -66,9 +66,9 @@ allprojects {
 ```
 logcat将打印出如下图:
 
-![](https://github.com/pruas/AnrManager/blob/master/caton_log.png)
+![Alt text](https://github.com/pruas/Caton/blob/master/caton_log.png)
 
 
 4、好了，是时候去测试一把了！
 
-# ANRManager
+
