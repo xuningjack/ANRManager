@@ -43,7 +43,7 @@ allprojects {
 监测模式有两种:
 
 <li>AnrManager.MonitorMode.FRAME</li>
-这种模式是通过监测绘制帧间隔时间来判断是否卡顿。也就是给Choreographer设置FrameCallback的方式。这种方式只能在API 16上才能使用，否则默认使用LOOPER模式。
+这种模式是通过监测绘制帧间隔时间来判断是否卡顿。也就是给Choreographer设置FrameCallback的方式。这种方式只能在API 16上才能使用，否则默认使用LOOPER模式。调用<b>FPSFrameCallBack</b>。
 
 <li>AnrManager.MonitorMode.LOOPER</li>
 这种模式是通过监测主线程消息处理时间来判断。也就是给主线程Looper设置Printer，来计算消息处理开始前和处理后的时间间隔判断。
