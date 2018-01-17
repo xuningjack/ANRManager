@@ -69,6 +69,5 @@ logcat将打印出如下图:
 ![Alt text](https://github.com/pruas/Caton/blob/master/caton_log.png)
 
 
-4、好了，是时候去测试一把了！
 
 
