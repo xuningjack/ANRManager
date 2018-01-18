@@ -1,4 +1,4 @@
-package com.jack.anr;
+package com.jack.anr.collector;
 
 
 

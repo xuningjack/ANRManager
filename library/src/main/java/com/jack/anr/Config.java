@@ -3,7 +3,6 @@ package com.jack.anr;
 import android.util.Log;
 
 
-
 /**
  * 配置参数
  * @author Jack
@@ -11,7 +10,7 @@ import android.util.Log;
 public class Config {
 
     /**
-     * 临界值
+     * 卡顿跳帧的临界值时间
      */
     public static long THRESHOLD_TIME = 0;
     /**

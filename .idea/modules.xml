@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/Caton.iml" filepath="$PROJECT_DIR$/.idea/Caton.iml" />
-      <module fileurl="file://$PROJECT_DIR$/Caton.iml" filepath="$PROJECT_DIR$/Caton.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ANRManager.iml" filepath="$PROJECT_DIR$/ANRManager.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/library/library.iml" filepath="$PROJECT_DIR$/library/library.iml" />
       <module fileurl="file://$PROJECT_DIR$/library/library.iml" filepath="$PROJECT_DIR$/library/library.iml" />
     </modules>
   </component>

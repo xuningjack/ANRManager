@@ -1,4 +1,4 @@
-package com.jack.anr;
+package com.jack.anr.observer;
 
 import android.content.Context;
 import android.os.Build;
@@ -7,9 +7,11 @@ import android.view.Choreographer;
 import android.view.Display;
 import android.view.WindowManager;
 
+import com.jack.anr.Config;
+
 
 /**
- * ANR回调
+ * ANR回调(API 16上才能使用)
  * @author Jack
  */
 @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN)
@@ -17,6 +19,9 @@ public class FPSFrameCallBack implements Choreographer.FrameCallback {
 
     private static final String TAG = "FPSFrameCallBack";
     private static long SKIPPED_FRAME_ANR_TRIGGER = 0;
+    /**
+     * 跳帧的临界值，大于此值可能发生ANR
+     */
     private static long SKIPPED_FRAME_WARNING_LIMIT = 0;
     private long mLastFrameTimeNanos;
     private long mFrameIntervalNanos;

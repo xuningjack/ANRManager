@@ -27,7 +27,7 @@ public class CustomApp extends Application {
                 .loggingEnabled(true)// 是否打印log
                 .collectInterval(1000) //监测采集堆栈时间间隔
                 .thresholdTime(2000) // 触发卡顿时间阈值
-                .callback(new AnrManager.Callback() { //设置触发卡顿时回调
+                .callback(new AnrManager.AnrCallback() { //设置触发卡顿时回调
                     @Override
                     public void onBlockOccurs(String[] stackTraces, String anr, long... blockArgs) {
                         for(String temp : stackTraces){

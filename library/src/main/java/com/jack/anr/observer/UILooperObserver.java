@@ -1,8 +1,12 @@
-package com.jack.anr;
+package com.jack.anr.observer;
 
 import android.os.Looper;
 import android.os.SystemClock;
 import android.util.Printer;
+
+import com.jack.anr.Config;
+
+
 
 
 /**
@@ -15,7 +19,7 @@ public class UILooperObserver implements Printer {
     private final static String LOG_BEGIN = ">>>>> Dispatching to";
     private final static String LOG_END = "<<<<< Finished to";
     /**UI线程anr的时间*/
-    public final static long ANR_TRIGGER_TIME = 5 * 10000 + 1;
+    public final static long ANR_TRIGGER_TIME = 5 * 1000;
     private long mPreMessageTime = 0;
     private long mPreThreadTime = 0;
     private BlockHandler mBlockHandler;
