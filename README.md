@@ -50,7 +50,7 @@ allprojects {
 
 2、结构原理图
 
-![Alt text](https://github.com/xuningjack/ANRManager/blob/master/imagesanrmanager_design.png)
+![Alt text](https://github.com/xuningjack/ANRManager/blob/master/images/anrmanager_design.png)
 
 3、测试。
 
