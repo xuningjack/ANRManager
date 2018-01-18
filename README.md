@@ -11,11 +11,17 @@ allprojects {
 }
 ```
 
-```
 默认情况下，你在Application的onCreate方法中这样写就可以。
-  AnrManager.initialize(this);  //default
- 或者
-  AnrManager.Builder builder = new AnrManager.Builder(this)
+
+```
+    AnrManager.initialize(this);  //default
+```
+
+你也可以使用Builder来自定义
+
+```java
+ // use builder build your custom way
+ AnrManager.Builder builder = new AnrManager.Builder(this)
                  //默认监测模式为AnrManager.MonitorMode.LOOPER，这样指定AnrManager.MonitorMode.FRAME
                  .monitorMode(AnrManager.MonitorMode.FRAME)
                  .loggingEnabled(true)// 是否打印log
@@ -36,30 +42,7 @@ allprojects {
                          //这里你可以卡顿信息上传到自己服务器
                      }
                  });
-  AnrManager.initialize(builder);
-
-
-```
-
-你也可以使用Builder来自定义
-
-```java
- // use builder build your custom way
-  AnrManager.Builder builder = new AnrManager.Builder(this)
-                .monitorMode(AnrManager.MonitorMode.FRAME)//默认监测模式为AnrManager.MonitorMode.LOOPER，这样指定AnrManager.MonitorMode.FRAME
-                .loggingEnabled(true)// 是否打印log
-                .collectInterval(1000) //监测采集堆栈时间间隔
-                .thresholdTime(2000) // 触发卡顿时间阈值
-                .callback(new AnrManager.Callback() { //设置触发卡顿时回调
-                    @Override
-                    public void onBlockOccurs(String[] stackTraces, String anr, long... blockArgs) {
-                        // stackTraces : 收集到的堆栈，以便分析卡顿原因。 anr : 如果应用发生ANR，这个就我ANR相关信息，没发生ANR，则为空。 
-                        //采用AnrManager.MonitorMode.FRAME模式监测时，blockArgs的size为1，blockArgs[0] 即是发生掉帧的数。
-                        //采用AnrManager.MonitorMode.LOOPER模式监测时，blockArgs的size为2，blockArgs[0] 为UI线程卡顿时间值，blockArgs[1]为在此期间UI线程能执行到的时间。
-                        //这里你可以把卡顿信息上传到自己服务器
-                    }
-                });
-  AnrManager.initialize(builder);
+         AnrManager.initialize(builder);
 ```
 
 1、监测模式
