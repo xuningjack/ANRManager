@@ -1,9 +1,9 @@
 # AnrManager
 AnrManager是一个android卡顿监测模块。当UI线程卡顿（得不到执行、无反应）达到预定阈值时，将把卡顿期间线程堆栈打印出来，以便开发人员分析和优化App的性能。 
 AnrManager由于本身有个收集线程堆栈的后台线程工作，所以会带来一定的性能消耗，这个大概在百分之2%-3%左右。设置收集堆栈时间越小，消耗越大。  
-触发卡顿时间范围是500ms\~4000ms,默认为3000ms;  
+触发卡顿时间范围是500ms\~5000ms，默认为3000ms;  
 收集时间间隔范围为500ms\~2000ms，默认为1000ms。  
-注意：自定义时，不要把收集时间间隔设置大于触发卡顿时间间隔。
+注意：自定义时，收集时间间隔设置不能大于触发卡顿时间间隔。
 # Usage
 Add it to your build.gradle with:
 ```gradle
@@ -27,9 +27,9 @@ allprojects {
  AnrManager.Builder builder = new AnrManager.Builder(this)
                  //默认监测模式为AnrManager.MonitorMode.LOOPER，这样指定AnrManager.MonitorMode.FRAME
                  .monitorMode(AnrManager.MonitorMode.FRAME)
-                 .loggingEnabled(true)// 是否打印log
+                 .loggingEnabled(true)  // 是否打印log
                  .collectInterval(1000) //监测采集堆栈时间间隔
-                 .thresholdTime(2000) // 触发卡顿时间阈值
+                 .thresholdTime(2000)   // 触发卡顿时间阈值
                  .callback(new AnrManager.AnrCallback() { //设置触发卡顿时回调
                      @Override
                      public void onBlockOccurs(String[] stackTraces, String anr, long... blockArgs) {
