@@ -12,7 +12,21 @@ allprojects {
         maven { url "https://jitpack.io" }
     }
 }
+
+// use the "-SNAPSHOT" tag for latest
+// more details here: https://jitpack.io/#xuningjack/ANRManager
+dependencies {
+    implementation 'com.github.xuningjack:ANRManager:-SNAPSHOT'
+}
 ```
+
+If your app is using:
+```xml
+<application
+    android:label= ...
+>
+```
+In `AndroidManifest.xml` you will need to add: `tools:replace="android:label"` to the `application` section in order to avoid compilation issues (since this library also defines `android:label`)
 
 默认情况下，你在Application的onCreate方法中这样写就可以。
 
